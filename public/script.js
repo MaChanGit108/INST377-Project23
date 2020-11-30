@@ -10,14 +10,14 @@ function convertBudgetToAmount(budget) {
         if (!descriptionInList) {
             list.push({
                 label: invoice.payment_description,
-                y: invoice.amount
+                y: Number(Number(invoice.amount).toFixed(2))
             });
         }
         else {
-            descriptionInList.y += invoice.amount;
+            descriptionInList.y = Number((Number(descriptionInList.y) + Number(invoice.amount)).toFixed(2));
         }
         return list;
-    }, []).sort((b, a) => (a.label > b.label) ? 1 : -1);
+    }, []).sort((b, a) => (a.y < b.y) ? 1 : -1);
 
     console.log("3");
     console.log(amountList)
@@ -48,22 +48,22 @@ function makeYourOptionsObject(budget) {
         axisY2: {
             interlacedColor: 'rgba(1,77,101,.2)',
             gridColor: 'rgba(1,77,101,.1)',
-            title: 'Restaurants By Category',
+            title: 'Total Budget by Category',
             labelFontSize: 12,
-            /*scaleBreaks: {type: "wavy",
-                          customBreaks: [{startValue: 40,
-                                          endValue: 50,
+            scaleBreaks: {type: "wavy",
+                          customBreaks: [{startValue: 80000000,
+                                          endValue: 780000000,
                                           color: "orange"
                                          },
-                                         {startValue: 85,
-                                          endValue: 100,
+                                         {startValue: 25000000,
+                                          endValue: 40000000,
                                           color: "orange"
                                          },
-                                         {startValue: 140,
-                                          endValue: 175,
+                                         {startValue: 1000000,
+                                          endValue: 15000000,
                                           color: "orange"
                                          }
-                         ]} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/ */
+                         ]} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
         },
         data: [{
             type: 'bar',
@@ -81,11 +81,12 @@ async function mainThread() {
                 'Content-Type': 'application/json'
             }
         })
+        console.log(data);
         const budget = await data.json();
         const reorganizedData = convertBudgetToAmount(budget);
         const options = makeYourOptionsObject(reorganizedData);
-        //const chart = new CanvasJS.Chart('chartContainer', options);
-        //chart.render();
+        const chart = new CanvasJS.Chart('chartContainer', options);
+        chart.render();
     } catch(err) {console.log(err)};
 }
 
