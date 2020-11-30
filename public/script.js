@@ -16,12 +16,13 @@ fetch('/api', {
 console.log(budget);
 
 const reorganizedData = convertBudgetToAmount(budget);
+console.log(budget);
 const options = makeYourOptionsObject(reorganizedData);
 const chart = new CanvasJS.Chart('chartContainer', options);
 //chart.render();
 
 function convertBudgetToAmount(budget) {
-    // process your restaurants here!
+
     console.log("1");
     const amountList = budget.reduce((list, invoice) => {
         console.log("2");
@@ -42,6 +43,7 @@ function convertBudgetToAmount(budget) {
     }, []).sort((b, a) => (a.label > b.label) ? 1 : -1);
     
     console.log("3");
+    console.log(amountList)
     return amountList;
 }  
 
