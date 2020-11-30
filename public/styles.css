@@ -88,10 +88,8 @@ html, body {
   }
   
   nav ul {
-    padding-top: 25px;
     list-style-type: none;
     flex: 2;
-    background-color: #A89CAB;
     display: flex;
   }
   
@@ -99,6 +97,8 @@ html, body {
     display: inline;
     text-align: center;
     flex: 1;
+    padding-top: 25px;
+    background-color: #A89CAB;
   }
   
   nav a, nav span {
