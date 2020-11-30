@@ -27,8 +27,8 @@ html, body {
   
   p, input, li {
     font-family: 'Roboto Condensed', sans-serif;
-    /*color: #2a2a2a;*/
-    color : #f5f5f5; /*temporary*/
+    color: #2a2a2a;
+    /* color : #f5f5f5; temporary */
   }
   
   h1 {
