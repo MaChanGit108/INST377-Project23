@@ -17,6 +17,15 @@ html, body {
     background-color: #97679C;
 
   }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    min-height: 100%;
+  }
   
   /* || typography */
   
@@ -146,9 +155,18 @@ html, body {
     margin-top: 10px;
   }
 
-  .footer p{
+  .footer p {
     color:white;
   }
+
+  #chartContainer {
+    background: rgb(190, 171, 149);
+    border: 2px dotted black;
+    border-radius: 4px;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 15px;
+}
 
   @media screen and (max-width: 1000px) {
     .container {
