@@ -16,29 +16,39 @@
 </head>
 <body>
     <div class = "header">
-          
-        <h1>Prince George's County Education Budget</h1>
-        <img src="pglogo3.png" alt="pgc logo">
-  
+                
+        <div class="logo">
+            <h1>Prince George's County Education Budget</h1>
+            <img src="pglogo3.png" alt="pgc logo" />
+          </div>
+
         <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="doc.html">Documentation</a></li>
-          </ul>
+            <a href="index.html">Home</a>
+            <a class="active" href="about.html">About</a>
+            <a href="doc.html">Documentation</a>  
         </nav>
-      </div>
-  
-      <div class = "main">
-        <div class = "article">
-          <h2>About</h2>
-          <p>For our INST377 group project, we wanted to utilize the data from Prince George’s County on finance and budget. By exploring the API the professor provided for us, we wanted to solve the problem or problem statement of, “How do we display our findings from the budget dataset of Prince George’s County to potential stakeholders in a clear and easy-to-understand manner on the laptop and phone devices?” We chose this API because it fits best with our information problem. It contains information about the education budget in the county from 2013 to 2020, but for a condensed sample, we may choose to only focus on 2017 to 2020. To display our findings, we will be creating a website using HTML, CSS, and JS to centralize, categorize, and visualize the budgeting data for those who don’t know and are interested in learning where most of their tax dollars goes towards.</p>
-        </div>
-  
-      <div class = "footer">
+
+    </div> <!-- closes "header" <div>-->
+    <div class="wrapper">
+        <div class="container">
+    
+            <div class = "main">
+                <div class = "article">
+                    <h2>About</h2>
+                    <p>For our INST377 group project, we wanted to utilize the data from Prince George’s County on finance and budget. By exploring the API the professor provided for us, we wanted to solve the problem or problem statement of, “How do we display our findings from the budget dataset of Prince George’s County to potential stakeholders in a clear and easy-to-understand manner on the laptop and phone devices?”</p> 
+                    <p>We chose this API because it fits best with our information problem. It contains information about the education budget in the county from 2013 to 2020, but for a condensed sample, we may choose to only focus on 2017 to 2020.</p>
+                    <p>To display our findings, we will be creating a website using HTML, CSS, and JS to centralize, categorize, and visualize the budgeting data for those who don’t know and are interested in learning where most of their tax dollars goes towards.</p>
+                </div>
+            </div> <!-- closes "main" <div> -->
+
+        </div> <!-- closes "container" <div> -->
+    </div> <!-- closes "wrapper" <div> -->
+    <div class = "footer">
         <p>Group Project Team 23, 2020.</p>
-      </div>
-      <script src="canvasjs.min.js"></script>
-      <script src="script.js"></script>
-    </body>
+    </div> <!-- closes "footer" <div> -->
+    
+    <script src="canvasjs.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>

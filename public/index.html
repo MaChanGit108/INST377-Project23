@@ -17,30 +17,40 @@
     <script src="https://data.princegeorgescountymd.gov/resource/2qma-7ez9.json"></script>
   </head>
   <body>
+    <div class="header">
+          
+      <div class="logo">
+        <h1>Prince George's County Education Budget</h1>
+        <img src="pglogo3.png" alt="pgc logo" />
+      </div>
+
+      <nav>            
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="doc.html">Documentation</a>            
+      </nav>
+
+    </div> <!-- closes "header" <div> -->
     <div class="wrapper">
       <div class="container">
-        <div class="header">
-          <h1>Prince George's County Education Budget</h1>
-          <img src="pglogo3.png" alt="pgc logo" />
-
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="doc.html">Documentation</a></li>
-            </ul>
-          </nav>
-        </div>
-
+ 
         <div class="main">
           <div class="article">
+            
             <h2>PGC Education Budget</h2>
+            
             <div class="target" id="chartContainer"></div>
-            <form>
-              <button type="submit" class="submitButton" name="submitButton">
-                CLICK TO SEE GRAPH
-              </button>
-            </form>
+            
+            <div class="section">
+              <h3>Filters</h3>
+              <form>
+                <p>Form with checklist of filters can go here</p>
+                <button type="submit" class="submitButton" name="submitButton">
+                  CLICK TO SEE GRAPH
+                </button>
+              </form>
+            
+            </div>
 
             <p>
               I don't think we need a button here. The chart can show the PGC
@@ -52,23 +62,15 @@
               We can also have a brief summary of whatever data is output on the
               chart at the time (this will probably be done using the script.
             </p>
-            <div class="section">
-            <section>
-                <h2>Filters</h2>
-              <form>
-                <p>Form with checklist of filters can go here</p>
-              </form>
-            </section>
-            </div>
-
-            <div class="footer">
-              <p>Group Project Team 23, 2020.</p>
-            </div>
-
-          </div>
-      </div>
+                        
+          </div> <!-- closes "article" <div> -->
+        </div>  <!-- closes "main" <div> -->
+        
     </div>
-    </div>
+    </div> <!-- closes "wrapper" <div> -->
+    <div class="footer">
+      <p>Group Project Team 23, 2020.</p>
+    </div> <!-- closes "footer" <div> -->
     <script src="canvasjs.min.js"></script>
     <script src="script.js"></script>
   </body>

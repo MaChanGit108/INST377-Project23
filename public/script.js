@@ -39,7 +39,7 @@ function makeYourOptionsObject(budget) {
         animationEnabled: true,
         colorSet: 'customColorSet1',
         title: {
-            text: 'PGC Education Budget 2020'
+            text: 'Total Budget by Category'
         },
         axisX: {
             interval: 1,
@@ -48,7 +48,7 @@ function makeYourOptionsObject(budget) {
         axisY2: {
             interlacedColor: 'rgba(1,77,101,.2)',
             gridColor: 'rgba(1,77,101,.1)',
-            title: 'Total Budget by Category',
+            //title: 'Total Budget by Category',
             labelFontSize: 12,
             scaleBreaks: {type: "wavy",
                           customBreaks: [{startValue: 80000000,
