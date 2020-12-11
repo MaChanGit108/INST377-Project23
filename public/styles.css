@@ -40,7 +40,7 @@ html, body {
     text-shadow: 0px 0px 20px black;
   }
   
-  p, input, li, a {
+  p, input, li {
     font-family: 'Roboto Condensed', sans-serif;
     color: #2a2a2a;
     /* color : #f5f5f5; temporary */
@@ -66,13 +66,18 @@ html, body {
   }
   
   p, li, a {
-    font-size: 1.6rem;
+    /*font-size: 1.6rem;*/
     line-height: 1.5;
   }
 
   p {
     font-size: 3rem;
     /* text-shadow: none; */
+  }
+
+  a {
+    color: blue;
+    text-shadow: none;
   }
   
   /* || header layout */

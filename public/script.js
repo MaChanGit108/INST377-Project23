@@ -140,7 +140,7 @@ function outputPayeeInfo(budget, p, budget_total, formatter) {
     totalElement.innerHTML = 'Total: <strong>' + formatter.format(payee_total) + '</strong>';
 
     const percentElement = document.createElement('p');
-    percentElement.innerHTML = '% of Budget: <strong>' + (payee_total/budget_total*100).toFixed(5) + '%</strong>';
+    percentElement.innerHTML = '% of Total Budget: <strong>' + (payee_total/budget_total*100).toFixed(5) + '%</strong>';
 
     display.prepend(headerElement);
     display.append(divElement);
