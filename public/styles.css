@@ -285,6 +285,15 @@ html, body {
     .container {
       justify-content: center;
     }
+
+    .payee-section {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .payee-display {
+      width: 100%;
+    }
   
     .one {
       display: flex;
