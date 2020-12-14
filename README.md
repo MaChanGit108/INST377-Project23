@@ -22,7 +22,7 @@
    - a
    
 * Link to Developer Manual
-   - <a id='devmanual'></a>II. Developer Manual
+   - [II. Developer Manual]
 
 ---
 ## <a id='devmanual'></a>II. Developer Manual
