@@ -19,7 +19,7 @@
    - Target browsers include all laptop and phone devices.
    
 * Link to User Manual
-   - 
+   - a
    
 * Link to Developer Manual
    - <a id='devmanual'></a>II. Developer Manual
