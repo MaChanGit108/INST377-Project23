@@ -19,7 +19,8 @@
    - Target browsers include all laptop and phone devices.
    
 * Link to User Manual
-   - [INST377 Project 23 Documentation Page](https://inst377-project23.herokuapp.com/doc.html): The Documentation Page of our website detailing the different pages and how to use them. 
+   - [INST377 Project 23 About Page](https://inst377-project23.herokuapp.com/about.html): The About Page of our website details what our project is. 
+   - [INST377 Project 23 Documentation Page](https://inst377-project23.herokuapp.com/doc.html): The Documentation Page of our website details the different pages and how to use them. 
    
 * Link to Developer Manual
    - [II. Developer Manual](#devmanual) section
