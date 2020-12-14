@@ -34,7 +34,7 @@
     1. Modify README.md and docs/contributing.md to represent your project  
 
 * How to run your application on a server
-   - 
+   - We
    
 * How to run any tests you have written for your software
    - No tests written
@@ -50,5 +50,5 @@
       - Ex: more attributes like zip code that were not addressed in our web application.
       - Implement a spatial visualization of budget payments. 
       - Utilize fiscal data from previous years to understand which sectors of education receive more money and why.
-   - This kind of questioning may even lead us to explore other datasets beyond budget-related data. 
+   - These kind of questionings may even lead us to explore other datasets beyond budget-related data. 
 
