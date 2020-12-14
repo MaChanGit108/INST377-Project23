@@ -21,15 +21,6 @@ function convertBudgetToAmount(budget) {
     return amountList;
 }
 
-// This function returns a new list filtering the total budget for the specified payee
-function filterBudgetByPayee(budget, payee) {
-    const list = [];
-    budget.forEach((invoice) => {
-        if (invoice.payee_name === payee) {list.push(invoice);}
-    });
-    return list;
-}
-
 // This function iterates the budget and sums the total amount of money
 function getBudgetTotal(budget) {
     let total = 0;
@@ -117,44 +108,63 @@ function explodePie (e) {
 }
 
 // This function is called when a payee from the list is selected. Creates and displays pie chart and other calculated information
-function outputPayeeInfo(budget, p, budget_total, formatter) {
-    const payee_name = p.id;
-    const display = document.querySelector('.payee-display');
-    
-    display.innerHTML = ''; // clears the display
+async function outputPayeeInfo(p, budget_total, formatter) {
+    try {
+        const payee_name = p.id;
+        const display = document.querySelector('.payee-display');
+        const curr = display.querySelector('#selected').innerText;
 
-    const payee_budget = filterBudgetByPayee(budget, payee_name);
-    const payee_total = getBudgetTotal(payee_budget);
-    const options = makeYourOptionsObject(convertBudgetToAmount(payee_budget), 'payee');
-    
-    // Creates header element for payee name
-    const headerElement = document.createElement('h2');
-    headerElement.innerText = p.innerText;
+        if (curr !== p.innerText) { // nothing happens if user selects same payee
 
-    // Creates payee chart container
-    const divElement = document.createElement('div');
-    divElement.className = 'target';
-    divElement.id = 'payeeChartContainer';
+            const send = {payee_name};
+            const fetch_options = {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(send)
+            }
+            
+            if (curr === 'Select a Payee') {    // upon first payee selection
+                // Creates and appends empty containers for payee chart and info
+                const divElement = document.createElement('div');
+                divElement.className = 'target';
+                divElement.id = 'payeeChartContainer';
+                display.append(divElement);
 
-    const totalElement = document.createElement('p');
-    totalElement.innerHTML = 'Total: <strong>' + formatter.format(payee_total) + '</strong>';
+                const totalElement = document.createElement('p');
+                totalElement.id = 'total-budget';
+                display.append(totalElement);
 
-    const percentElement = document.createElement('p');
-    percentElement.innerHTML = '% of Total Budget: <strong>' + (payee_total/budget_total*100).toFixed(5) + '%</strong>';
+                const percentElement = document.createElement('p');
+                percentElement.id = 'percent-budget';
+                display.append(percentElement);
 
-    display.prepend(headerElement);
-    display.append(divElement);
-    display.append(totalElement);
-    display.append(percentElement);
+                fetch_options.method = 'POST';
 
-    const chart = new CanvasJS.Chart('payeeChartContainer', options);
-    chart.render();
+            } else {    // for successive payee selections
+                fetch_options.method = 'PUT';
+            }
+
+            const data = await fetch('/api', fetch_options);   // returns a new list filtering the total budget for the specified payee
+            const payee_budget = await data.json()    
+        
+            const payee_total = getBudgetTotal(payee_budget);
+            const options = makeYourOptionsObject(convertBudgetToAmount(payee_budget), 'payee');
+            
+            display.querySelector('#selected').innerText = p.innerText;
+            display.querySelector('#total-budget').innerHTML = 'Total: <strong>' + formatter.format(payee_total) + '</strong>';
+            display.querySelector('#percent-budget').innerHTML = '% of Total Budget: <strong>' + (payee_total/budget_total*100).toFixed(5) + '%</strong>';
+
+            const chart = new CanvasJS.Chart('payeeChartContainer', options);
+            chart.render();
+        }
+    } catch(err) {console.log(err)};
 }
 
 async function mainThread() {
     try {
         const data = await fetch('/api', {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -189,7 +199,7 @@ async function mainThread() {
         });
 
         const payees = document.querySelectorAll('.payee');
-        payees.forEach(p => p.addEventListener('click', () => outputPayeeInfo(budget, p, budget_total, formatter)));    // event listener for payee mouse selection
+        payees.forEach(p => p.addEventListener('click', () => outputPayeeInfo(p, budget_total, formatter)));    // event listener for payee mouse selection
 
     } catch(err) {console.log(err)};
 }

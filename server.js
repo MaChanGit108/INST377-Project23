@@ -22,15 +22,38 @@ app.use((req, res, next) => {
 
 app.route('/api')
   .get(async (req, res) => {
-    console.log('GET request detected');
-    console.log('fetch request data', json);
-  })
-  .post(async(req, res) => {
-    console.log('POST request detected');
+    //console.log('GET request detected');
+    //console.log('fetch request data', json);
+    console.log('GET request detected, initializing budget chart');
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/uh6s-izyj.json?agency=EDUCATION');
     const json = await data.json();
+    //console.log(json);
     res.json(json);
+  })
+  .post(async (req, res) => {
+    console.log('POST request detected, displaying payee info');
+    const data = await fetch('https://data.princegeorgescountymd.gov/resource/uh6s-izyj.json?agency=EDUCATION');
+    const json = await data.json();
+    
+    const filtered = [];
+    json.forEach((entry) => {
+      if (entry.payee_name === req.body.payee_name) {filtered.push(entry);}
+    });
+
+    res.json(filtered);
     // console.log('res.json', json);
+  })
+  .put(async (req, res) => {
+    console.log('PUT request detected, updating payee display');
+    const data = await fetch('https://data.princegeorgescountymd.gov/resource/uh6s-izyj.json?agency=EDUCATION');
+    const json = await data.json();
+    
+    const filtered = [];
+    json.forEach((entry) => {
+      if (entry.payee_name === req.body.payee_name) {filtered.push(entry);}
+    });
+
+    res.json(filtered);
   });
 
 app.listen(port, () => {
