@@ -19,7 +19,7 @@
    - Target browsers include all laptop and phone devices.
    
 * Link to User Manual
-   - a
+   - [INST377 Project 23 Documentation Page](https://inst377-project23.herokuapp.com/doc.html): The Documentation Page of our website detailing the different pages and how to use them. 
    
 * Link to Developer Manual
    - [II. Developer Manual](#devmanual) section
@@ -34,15 +34,18 @@
     1. Modify README.md and docs/contributing.md to represent your project  
 
 * How to run your application on a server
-   - We
+   - We ran our application on Heroku.
    
 * How to run any tests you have written for your software
-   - No tests written
+   - No additional tests written.
    
 * The API for your server application - all GET, POST, PUT, etc endpoints, and what they each do
-   - GET: 
-   - POST: 
-   - PUT: 
+   - GET: returns data from a read request
+     - a
+   - POST: accepts user requests for information
+     - a
+   - PUT: accepts *different* user requests for information
+     - a
    
 * A clear set of expectations around known bugs and a road-map for future development.
    - ROAD-MAP for Next Step: 
@@ -50,5 +53,10 @@
       - Ex: more attributes like zip code that were not addressed in our web application.
       - Implement a spatial visualization of budget payments. 
       - Utilize fiscal data from previous years to understand which sectors of education receive more money and why.
+      - Make own local database (NEDB, SQLite) that can store POST information and run on Heroku without an external support.
+      - Use React for your front-end, and design it to update dynamically
+      - Build your application in a framework like bootstrap and use a colour scheme derived from photos to be in sync
+      - Use advanced CSS animations for all your motion on the front end
+        - Button clicks, swipes, screen transitions
    - These kind of questionings may even lead us to explore other datasets beyond budget-related data. 
 
