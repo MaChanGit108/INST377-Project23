@@ -36,6 +36,7 @@
 
 * How to run your application on a server
    - We ran our application on Heroku.
+   
    - To run on local server:
    1. Open a terminal window in your VSCode editor by clicking "Terminal > New Terminal" in your menus.
    1. Install nodejs version higher than 13.2 from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
