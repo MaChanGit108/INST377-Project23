@@ -28,10 +28,10 @@
 ## <a id='devmanual'></a>II. Developer Manual
 
 * To install application and all dependencies, perform the following steps:
-1. Make a fork of this repo.
-1. Clone your fork onto your local machine from GitHub.
-1. Create a new local repository and copy the files from this repo into it.
-1. Modify README.md and docs/contributing.md to represent your project  
+    1. Make a fork of this repo.
+    1. Clone your fork onto your local machine from GitHub.
+    1. Create a new local repository and copy the files from this repo into it.
+    1. Modify README.md and docs/contributing.md to represent your project  
 
 * How to run your application on a server
    - 
