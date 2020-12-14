@@ -55,6 +55,7 @@
 * How to run any tests you have written for your software
    - No additional tests written.
    - If want to run tests, make sure cypress installed and type 'npx cypress run'.
+   - Write your own tests in a cypress file.
    
 * The API for your server application - all GET, POST, PUT, etc endpoints, and what they each do
    - GET: returns data from a read request
