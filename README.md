@@ -50,7 +50,7 @@
 * A clear set of expectations around known bugs and a road-map for future development.
    - ROAD-MAP for Next Step: 
       - Implement more features to answer more questions about the given data.
-      - Ex: more attributes like zip code that were not addressed in our web application.
+        - Ex: more attributes like zip code that were not addressed in our web application.
       - Implement a spatial visualization of budget payments. 
       - Utilize fiscal data from previous years to understand which sectors of education receive more money and why.
       - Make own local database (NEDB, SQLite) that can store POST information and run on Heroku without an external support.
