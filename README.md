@@ -59,11 +59,11 @@
    
 * The API for your server application - all GET, POST, PUT, etc endpoints, and what they each do
    - GET: returns data from a read request
-     - a
+     - Pulls the data from the Prince George's County API and initializes the chart for overall budget.
    - POST: accepts user requests for information
-     - a
+     - Accepts first user's request input and displays payee graph.
    - PUT: accepts *different* user requests for information
-     - a
+     - Accepts subsequent user request inputs and displays subsequent display changes in payee graph.
    
 * A clear set of expectations around known bugs and a road-map for future development.
    - ROAD-MAP for Next Step: 
