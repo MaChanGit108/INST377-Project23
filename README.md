@@ -36,9 +36,24 @@
 
 * How to run your application on a server
    - We ran our application on Heroku.
+   - To run on local server:
+   1. Open a terminal window in your VSCode editor by clicking "Terminal > New Terminal" in your menus.
+   1. Install nodejs version higher than 13.2 from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+   1. Type 'npm install' in new terminal.
+   - Once packages installed,
+   1. Type 'npm start'. This will start 'node server.js' and open port 3000 (Default).
+   1. Type '[localhost:3000](http://localhost:3000/) to run on Internet. 
+   
+   - To pull new changes:
+   1. Open separate split terminal.
+   1. Type 'git remote -v'.
+   1. Type 'git pull __ main'
+      - 'git pull origin main'.
+   1. Make sure to commit new changes to main branch.
    
 * How to run any tests you have written for your software
    - No additional tests written.
+   - If want to run tests, 
    
 * The API for your server application - all GET, POST, PUT, etc endpoints, and what they each do
    - GET: returns data from a read request
