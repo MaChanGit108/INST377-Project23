@@ -1,0 +1,22 @@
+Title: Prince George’s County Education Budget
+ 
+Team members:  Matthew Chan, Taylor Green, Jian Soriano, Frazer Workneh
+ 
+Link to where your app is running: https://inst377-project23.herokuapp.com/
+ 
+Information problem you're trying to solve: Our problem statement was “How do we display our findings from the 2020 budget categories and payees from the dataset of Prince George’s County to potential stakeholders in a clear and easy-to-understand manner on the laptop and phone devices?”
+ 
+Identified stakeholders/target browsers: The stakeholders of this project are residents of Prince George’s County, specifically taxpayers, contractors and employees. Residents of Prince George’s County pay taxes and also attend the public schools, so it is important for them to know how much of their money is going into education. The schools are remodeled or upgraded and because of that, the county has to hire contractors. The cost of renovations is determined by the county’s budget which affects the amount of contractors and the amount of renovations. PG County employees are also affected by the education budget because it affects their salaries.
+ 
+Data you chose to work with: Here is the link to our API: https://data.princegeorgescountymd.gov/browse?category=Finance+and+Budget
+We chose the “Spending Information for FY 2020.”
+ 
+Chosen strategies and solutions for the problem: Our solution to the information problem was to provide readable and accurate information to the stakeholders. For us this meant to utilize the data from our endpoint and develop some readable graphs and an interactive dashboard to allow the user to quickly and easily get the important information they wanted without the difficulty of doing the heavy research elsewhere.
+ 
+Technical system decision rationale: We initially favored a web application that had revolved around a search bar. We figured it would allow our stakeholders the freedom to analyze the given data. However, the process to code seemed too difficult and also seemed quite unnecessary for the goal of our web application. At this point we chose to research some web applications that resembled the problem we were trying to solve. We discovered through the Prince Georges County Data endpoint that a very user-friendly option for playing around with the raw data would be to utilize a framework that focused on filters and visualization tools. So our goal was to stay on script with the filtration process and as a result we pulled our data from the endpoint to produce a defaulted graph and a visualization tool that relied on filtering through a given attribute from the endpoint that we felt to be the most important to our stakeholders.
+ 
+How/if your final system helps to address the problem: Our final system answers the basic questions that our stakeholders may have. Our stakeholders are curious about where their taxpayer dollars are going to in the education sector of the county budget. We have successfully developed visualizations that help answer that question in a clear and concise manner. Furthermore we offer the stakeholders the opportunity to narrow down and explore who the payees’ are and how they are spending their allocated dollars. With this information the stakeholders can dictate how they want to move forward with it.
+ 
+Challenges faced and impact on final design: The first challenge that we faced was that we were informed by our professor that our initial project was too broad and that we needed to change the scope. We still decided to take on the budget dataset, but we decided to focus on construction costs and how they influence the education budget. Also, when we set up our webpage, the display was not consistent on every member’s laptop. Thankfully, during a meeting with our professor, they located the problem and helped us resolve it. Now, the final design is consistent for each of us.
+ 
+Possible future work directions with this problem: We hope to implement more features that can hopefully answer more questions about the given data. For example there are more attributes like zip code that were not addressed in our web application. Therefore, in a future version of the project we may implement a spatial visualization of budget payments. And in effort to answer more questions we may utilize fiscal data from previous years to understand which sectors of education receive more money and why? This kind of questioning may even lead us to explore other datasets beyond budget-related data. 
