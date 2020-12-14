@@ -49,12 +49,12 @@
    1. Open separate split terminal.
    1. Type 'git remote -v'.
    1. Type 'git pull __ main'
-      - 'git pull origin main'.
+      - Ex: 'git pull origin main'.
    1. Make sure to commit new changes to main branch.
    
 * How to run any tests you have written for your software
    - No additional tests written.
-   - If want to run tests, 
+   - If want to run tests, make sure cypress installed and type 'npx cypress run'.
    
 * The API for your server application - all GET, POST, PUT, etc endpoints, and what they each do
    - GET: returns data from a read request
